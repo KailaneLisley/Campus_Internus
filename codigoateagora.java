@@ -1,5 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.Random;
 
 class Tesouro {
     private String nome;
@@ -36,9 +39,8 @@ class Tesouro {
         this.valorPontos = valorPontos;
     }
 
-    // Método que poderá ser sobrescrito pelas subclasses
     public String efeito() {
-        return ("Fragmento de memória recuperado!");
+        return "Fragmento de memória recuperado!";
     }
 }
 
@@ -49,7 +51,7 @@ class MemoriaInfancia extends Tesouro {
 
     @Override
     public String efeito() {
-        return ("Uma lembrança feliz da infância fortaleceu sua determinação! +10% de resistência emocional.");
+        return "Uma lembrança feliz da infância fortaleceu sua determinação! +10% de resistência emocional.";
     }
 }
 
@@ -60,7 +62,7 @@ class MemoriaMae extends Tesouro {
 
     @Override
     public String efeito() {
-        return ("O abraço da mãe reaquece o coração. Você se cura totalmente!");
+        return "O abraço da mãe reaquece o coração. Você se cura totalmente!";
     }
 }
 
@@ -71,16 +73,35 @@ class MemoriaDescobertaCientifica extends Tesouro {
 
     @Override
     public String efeito() {
-        return ("Você se lembra da sua grande conquista científica! Ganha visão extra por 3 movimentos.");
+        return "Você se lembra da sua grande conquista científica! Ganha visão extra por 3 movimentos.";
     }
 }
 
-class Aventureiro {
+class MemoriaChave extends Tesouro {
+    private int posicaoDesbloqueio;
+
+    public MemoriaChave(String nome, int localizacao, int valorPontos, int posicaoDesbloqueio) {
+        super(nome, localizacao, valorPontos);
+        this.posicaoDesbloqueio = posicaoDesbloqueio;
+    }
+
+    public int getPosicaoDesbloqueio() {
+        return posicaoDesbloqueio;
+    }
+
+    @Override
+    public String efeito() {
+        return "Você encontrou a Chave da Mente! Sala secreta na posição " 
+               + posicaoDesbloqueio + " desbloqueada!";
+    }
+}
+
+class Cientista {
     private String nome;
     private int localizacao;
     private List<Tesouro> tesourosEncontrados;
 
-    public Aventureiro(String nome, int localizacao) {
+    public Cientista(String nome, int localizacao) {
         this.nome = nome;
         this.localizacao = localizacao;
         this.tesourosEncontrados = new ArrayList<>();
@@ -112,35 +133,133 @@ class Aventureiro {
 }
 
 class Perigo {
-    private int localizacao_perigo;
+    private int localizacao;
     private double dano;
 
-    public Perigo(int localizacao_perigo, double dano){
-        this.localizacao_perigo = localizacao_perigo;
+    public Perigo(int localizacao, double dano) {
+        this.localizacao = localizacao;
         this.dano = dano;
     }
 
-    public int getLocalizacao_perigo(){
-        return localizacao_perigo;
+    public int getLocalizacao() {
+        return localizacao;
     }
 
-    public double getDano(){
+    public double getDano() {
         return dano;
     }
 
-    public void setLocalizacao_perigo(int localizacao_perigo){
-        this.localizacao_perigo = localizacao_perigo;
+    public void setLocalizacao(int localizacao) {
+        this.localizacao = localizacao;
     }
 
-    public void setDano(double dano){
+    public void setDano(double dano) {
         this.dano = dano;
     }
+
+    public String efeito() {
+        return "Você foi atingido por um perigo!";
+    }
 }
 
-class Labirinto{
-    
+class Pesadelo extends Perigo {
+    public Pesadelo(int localizacao, double dano) {
+        super(localizacao, dano);
+    }
+
+    @Override
+    public String efeito() {
+        return "Você foi paralisado por um terrível pesadelo! Perde um turno.";
+    }
 }
 
-public class LabirintodaMemoria {
+class Ansiedade extends Perigo {
+    public Ansiedade(int localizacao, double dano) {
+        super(localizacao, dano);
+    }
 
+    @Override
+    public String efeito() {
+        return "Uma crise de ansiedade te confunde. Você anda aleatoriamente!";
+    }
+}
+
+class Duvida extends Perigo {
+    public Duvida(int localizacao, double dano) {
+        super(localizacao, dano);
+    }
+
+    @Override
+    public String efeito() {
+        return "A dúvida te faz hesitar. Seu próximo movimento é bloqueado.";
+    }
+}
+
+class Labirinto {
+    private List<Tesouro> tesourosDisponiveis;
+    private List<Perigo> perigos;
+    private Set<Integer> salasTrancadas;
+    private List<List<String>> estrutura;
+    private int tamanho;
+
+    public Labirinto(int tamanho) {
+        this.tamanho = tamanho;
+        this.tesourosDisponiveis = new ArrayList<>();
+        this.perigos = new ArrayList<>();
+        this.salasTrancadas = new HashSet<>();
+        this.estrutura = new ArrayList<>();
+        inicializarLabirinto();
+    }
+
+    private void inicializarLabirinto() {
+        tesourosDisponiveis.add(new MemoriaInfancia("Brinquedo Favorito", 3, 50));
+        tesourosDisponiveis.add(new MemoriaMae("Abraço da Mãe", 7, 80));
+        tesourosDisponiveis.add(new MemoriaChave("Chave Secreta", 5, 0, 12));
+
+        perigos.add(new Pesadelo(4, 20));
+        perigos.add(new Ansiedade(9, 15));
+
+        salasTrancadas.add(12);
+    }
+
+    public Tesouro encontrarTesouroNaPosicao(int posicao) {
+        for (Tesouro t : tesourosDisponiveis)
+            if (t.getLocalizacao() == posicao)
+                return t;
+        return null;
+    }
+
+    public Perigo encontrarPerigoNaPosicao(int posicao) {
+        for (Perigo p : perigos)
+            if (p.getLocalizacao() == posicao)
+                return p;
+        return null;
+    }
+
+    public void removerTesouro(Tesouro t) {
+        tesourosDisponiveis.remove(t);
+    }
+
+    public boolean salaLiberada(int posicao) {
+        return !salasTrancadas.contains(posicao);
+    }
+
+    public void desbloquearSala(int posicao) {
+        salasTrancadas.remove(posicao);
+    }
+
+    public void gerarLabirinto() {
+        Random random = new Random();
+        for (int i = 0; i < tamanho; i++) {
+            List<String> caminho = new ArrayList<>();
+            for (int j = 0; j < tamanho; j++) {
+                if (random.nextInt(100) < 70) {
+                    caminho.add("*");
+                } else {
+                    caminho.add("!");
+                }
+            }
+            estrutura.add(caminho);
+        }
+    }
 }
