@@ -35,6 +35,44 @@ class Tesouro {
     public void setValorPontos(int valorPontos) {
         this.valorPontos = valorPontos;
     }
+
+    // Método que poderá ser sobrescrito pelas subclasses
+    public String efeito() {
+        return ("Fragmento de memória recuperado!");
+    }
+}
+
+class MemoriaInfancia extends Tesouro {
+    public MemoriaInfancia(String nome, int localizacao, int valorPontos) {
+        super(nome, localizacao, valorPontos);
+    }
+
+    @Override
+    public String efeito() {
+        return ("Uma lembrança feliz da infância fortaleceu sua determinação! +10% de resistência emocional.");
+    }
+}
+
+class MemoriaMae extends Tesouro {
+    public MemoriaMae(String nome, int localizacao, int valorPontos) {
+        super(nome, localizacao, valorPontos);
+    }
+
+    @Override
+    public String efeito() {
+        return ("O abraço da mãe reaquece o coração. Você se cura totalmente!");
+    }
+}
+
+class MemoriaDescobertaCientifica extends Tesouro {
+    public MemoriaDescobertaCientifica(String nome, int localizacao, int valorPontos) {
+        super(nome, localizacao, valorPontos);
+    }
+
+    @Override
+    public String efeito() {
+        return ("Você se lembra da sua grande conquista científica! Ganha visão extra por 3 movimentos.");
+    }
 }
 
 class Aventureiro {
