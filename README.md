@@ -1,6 +1,6 @@
-# 🌟 Labirinto da Autoestima: A Jornada de um Estudante
+  # 🌟 Campus Internus: A Jornada de um Universitário
 
-Bem-vindo(a) ao repositório do jogo narrativo "Labirinto da Autoestima", desenvolvido em Java com base em Programação Orientada a Objetos. Você acompanhará um estudante universitário que, lutando contra a síndrome do impostor e a pressão dos estudos, precisa navegar por um labirinto mental para redescobrir sua autoconfiança e valor. 🧠💪
+Bem-vindo(a) ao repositório do jogo narrativo "Campus Internos", desenvolvido em Java com base em Programação Orientada a Objetos. Você acompanhará um estudante universitário que, lutando contra a síndrome do impostor e a pressão dos estudos, precisa navegar por um labirinto mental para redescobrir sua autoconfiança e valor. 🧠💪
 
 ## 📜 Contexto Narrativo
 
