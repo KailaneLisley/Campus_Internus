@@ -1,39 +1,39 @@
-# 🧠 Labirinto da Mente: A Jornada de uma Cientista
+# 🌟 Labirinto da Autoestima: A Jornada de um Estudante
 
-Bem-vindo(a) ao repositório do jogo narrativo "Labirinto da Mente", desenvolvido em Java com base em Programação Orientada a Objetos. Você será uma cientista que, após um experimento mal-sucedido, precisa navegar por um labirinto mental para reconstruir suas memórias e escapar de sua própria mente. 🧩✨
-
-## 🎮 Sobre o Jogo
-
-Explore um universo psicológico onde cada sala representa fragmentos da mente da protagonista. Você encontrará:
-
-- Memórias da infância, da mãe e da carreira científica (classes Tesouro e subclasses)
-- Perigos como Ansiedade, Pesadelos e Dúvidas (classes Perigo e variações)
-- Portas trancadas desbloqueadas com memórias-chave
-- Habilidades especiais: Clarividência, Resiliência Emocional e mais
-- Charadas e puzzles que guardam segredos do subconsciente
-
-Narrativas introspectivas revelam a história à medida que você progride, com reflexões da própria cientista guiando o jogador.
+Bem-vindo(a) ao repositório do jogo narrativo "Labirinto da Autoestima", desenvolvido em Java com base em Programação Orientada a Objetos. Você acompanhará um estudante universitário que, lutando contra a síndrome do impostor e a pressão dos estudos, precisa navegar por um labirinto mental para redescobrir sua autoconfiança e valor. 🧠💪
 
 ## 📜 Contexto Narrativo
 
-Uma neurocientista brilhante está presa em coma após um experimento com a mente humana. O labirinto que enfrenta é uma metáfora de sua jornada interior — repleta de lembranças, traumas e aspirações. De jardins da infância a laboratórios futuristas, cada fase revela partes da sua identidade.
+Um estudante universitário, sobrecarregado pela vida académica e duvidando constantemente das suas capacidades, sente-se perdido num labirinto mental. Este labirinto é formado pelas suas ansiedades, medos de fracasso e a persistente sensação de não ser bom o suficiente. Cada seção do labirinto – desde corredores que simbolizam a pressão por prazos até bibliotecas onde se sente um impostor – reflete aspetos da sua luta interna. A progressão no jogo simboliza uma jornada de reconhecimento das próprias qualidades e o fortalecimento da autoestima.
+
+## 🎮 Sobre o Jogo
+
+Explore um universo interno onde cada sala e corredor reflete os desafios e inseguranças do estudante. Você encontrará:
+
+- **Pequenas Conquistas:** Itens colecionáveis que representam momentos de validação e autoconfiança (ex: "Elogio Recebido", "Problema Resolvido", "Nota Positiva"). Estes são representados pela classe `PequenaConquista` e suas subclasses.
+- **Pensamentos Negativos:** Obstáculos que manifestam a síndrome do impostor e abalam a confiança do estudante (ex: "Autocrítica Excessiva", "Medo de Exposição", "Dúvida Paralisante"). Estes são representados pela classe `PensamentoNegativo` e suas variações.
+- **Portas Simbólicas:** Barreiras que precisam de "Chaves da Autoestima" (um tipo especial de `PequenaConquista` que representa uma realização significativa) para serem desbloqueadas.
+- **Momentos de Clareza:** Habilidades simples que ajudam a superar obstáculos ou a ganhar uma nova perspetiva (ex: "Foco Renovado", "Lembrete Positivo").
+- **Desafios Simples:** Enigmas ou interações que simbolizam a superação de bloqueios mentais e recompensam o jogador.
+
+Narrativas introspectivas e reflexões do próprio estudante revelam a sua história e progresso emocional à medida que você avança no jogo.
 
 ## 🧱 Funcionalidades
 
-- Arquitetura baseada em POO (Classes: Cientista, Tesouros, Perigos, Labirinto)
-- Geração de labirinto dinâmica ou segmentada
-- Progressão de dificuldade conforme o tempo ou avanço
-- Sistema de portas e chaves baseado em memórias especiais
-- Desafios lógicos com recompensas
-- Modo história com frases e pensamentos marcantes
-- Tratamento robusto de exceções para evitar falhas
+- Arquitetura baseada em POO (Classes principais: `Estudante`, `PequenaConquista`, `PensamentoNegativo`, `Labirinto`).
+- Geração de labirinto (pode ser pré-definida para simplificar ou procedural básica).
+- Progressão da intensidade dos "Pensamentos Negativos".
+- Sistema de portas simbólicas e "Chaves da Autoestima".
+- Desafios simples com recompensas que fortalecem a confiança.
+- Modo história conduzido por reflexões e pensamentos do estudante.
+- Tratamento de exceções para uma experiência de jogo mais fluida.
 
 ## 🌟 Diferenciais
 
-- Forte narrativa com elementos emocionais
-- Sistema de habilidades desbloqueáveis
-- Easter Egg: sala secreta com diário/cartas pessoais 💌
-- Citações inspiradoras ao final de cada fase
+- Forte narrativa focada na jornada de autoconhecimento e superação da síndrome do impostor.
+- Sistema de "Momentos de Clareza" como mecânica de apoio.
+- Easter Egg: "Sala da Gratidão", um espaço secreto com mensagens de apoio ou um diário de conquistas passadas, reforçando a autoestima. 💌
+- Mensagens de encorajamento ao superar desafios ou encontrar "Pequenas Conquistas" significativas.
 
 ## 👩‍💻 Equipe de Desenvolvimento
 
@@ -41,5 +41,5 @@ Uma neurocientista brilhante está presa em coma após um experimento com a ment
 - Kailane Lisley de Araújo Silva  
 - Quézia Beatriz da Silva Costa 
 
-Esperamos que a jornada desta cientista inspire reflexão e superação — assim como nos inspirou durante a criação. 
+Esperamos que a jornada deste estudante inspire reflexão, empatia e o reconhecimento da importância da autocompaixão e da autoestima – assim como nos inspirou durante a sua re-criação.
 
