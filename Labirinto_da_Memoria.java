@@ -10,6 +10,7 @@ class Tesouro {
     private int localizacao;
     private int valorPontos;
 
+
     public Tesouro(String nome, int localizacao, int valorPontos) {
         this.nome = nome;
         this.localizacao = localizacao;
@@ -101,11 +102,13 @@ class Cientista {
     private String nome;
     private int localizacao;
     private List<Tesouro> tesourosEncontrados;
+    private double autoestima;
 
     public Cientista(String nome, int localizacao) {
         this.nome = nome;
         this.localizacao = localizacao;
         this.tesourosEncontrados = new ArrayList<>();
+        this.autoestima = 100;
     }
 
     public String getNome() {
@@ -130,9 +133,19 @@ class Cientista {
 
     public void adicionarTesouro(Tesouro tesouro) {
         tesourosEncontrados.add(tesouro);
+        autoestima += 5; // ao encontrar tesouro a autoestima aumenta
+        if (autoestima > 100){
+            autoestima = 100; // limita autoestima em 100%
     }
 }
-
+// Método para simular a síndrome do impostor
+    public void experienciarSindromeImpostor() {
+        autoestima -= 10;  // Reduz autoestima temporariamente
+        if (autoestima < 0) autoestima = 0;  // Limita a autoestima a 0%
+        System.out.println(nome + " sente que não merece o que encontrou e sua autoestima cai para " + autoestima + "%.");
+    }
+}
+    
 class Perigo {
     private int localizacao;
     private double dano;
@@ -221,12 +234,16 @@ class Labirinto {
         salasTrancadas.add(12);
     }
 
-    public Tesouro encontrarTesouroNaPosicao(int posicao) {
-        for (Tesouro t : tesourosDisponiveis)
-            if (t.getLocalizacao() == posicao)
+    public Tesouro encontrarTesouroNaPosicao(int posicao Cientista cientista) {
+        for (Tesouro t : tesourosDisponiveis){
+            if (t.getLocalizacao() == posicao){
+                cientista.adicionarTesouro(t);
                 return t;
+            }
+        }
         return null;
     }
+
 
     public Perigo encontrarPerigoNaPosicao(int posicao) {
         for (Perigo p : perigos)
@@ -275,7 +292,25 @@ class Labirinto {
     }
 }
 
-//ADICIONAR FUNÇÃO DE VISUALIZAR LABIRINTO!!
+//ADICIONEI METODO DE VISUALIZAR LABIRINTO!!
+    public void visualizarLabirinto(Cientista cientista) {
+    int posCientista = cientista.getLocalizacao();
+    for (int i = 0; i < tamanho; i++) {
+        for (int j = 0; j < tamanho; j++) {
+            int posAtual = i * tamanho + j;
+            if (posAtual == posCientista) {
+                System.out.print("☹ ");
+            } else if (encontrarTesouroNaPosicao(posAtual, cientista) != null) {
+                System.out.print("❤ ");
+            } else if (encontrarPerigoNaPosicao(posAtual) != null) {
+                System.out.print("☠ ");
+            } else {
+                System.out.print("= ");
+            }
+        }
+        System.out.println();
+    }
+}
 
 //Q ~ CRIANDO O MAIN, com menu
 public class ProjetoPOO {
