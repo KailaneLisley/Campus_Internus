@@ -9,6 +9,7 @@ import java.util.Scanner;
 class PequenaConquista {
     private String nome;
     private int valorEmPontosDeConfianca;
+    private int localizacao;
 
     public PequenaConquista(String nome,int valorEmPontosDeConfianca) {
         this.nome = nome;
@@ -160,12 +161,12 @@ class Estudante {
         this.pontosDeConfianca += valor;
         System.out.println("Sua confiança aumentou para " + pontosDeConfianca);
     }
-}
 
 //Perigo
 class PensamentoNegativo {
     private String nome;
     private int impactoConfianca; //Dano do perigo
+    private int localizacao;
 
     public PensamentoNegativo(String nome,  int impactoConfianca) {
         this.nome = nome;
@@ -179,7 +180,6 @@ class PensamentoNegativo {
     public void setLocalizacao(int localizacao) {
         this.localizacao = localizacao;
     }
-
     public String getNome(){
         return nome;
     }
@@ -293,6 +293,10 @@ class Labirinto {
             System.out.println();
         }
     }
+    public boolean isPosicaoValida(int posicao) {
+        return posicao >= 0 && posicao < tamanho * tamanho && salaLiberada(posicao);
+    }
+
 
     public PequenaConquista encontrarPequenaConquistaNaPosicao(int posicao) {
         for (PequenaConquista pq : pequenasConquistasDisponiveis)
@@ -317,7 +321,9 @@ class Labirinto {
     }
 
     public boolean salaLiberada(int posicao) {
-        return !salasTrancadas.contains(posicao);
+        int linha = posicao / tamanho;
+        int coluna = posicao % tamanho;
+        return estrutura.get(linha).get(coluna).equals("*");
     }
 
     public void desbloquearSala(int posicao) {
@@ -331,6 +337,9 @@ class Labirinto {
 
     public void removerPensamentoNegativo(PensamentoNegativo pn) {
         pensamentosNegativos.remove(pn);
+    }
+    public int getTamanho(){
+        return tamanho;
     }
 
     // Ainda precisa de adaptação
@@ -365,6 +374,14 @@ class Labirinto {
     }
 
 }
+
+
+
+
+
+
+
+
 
 //Classe principal
 public class Estagiario {
@@ -456,6 +473,7 @@ public class Estagiario {
                     // Simula interações com conquistas e perigos (você pode adaptar conforme a mecânica)
                     PequenaConquista conquista = labirinto.encontrarPequenaConquistaNaPosicao(3);
                     if (conquista != null) {
+                        digitando("Você encontrou uma Pequena Conquista! " + conquista.getNome(), 40);
                         if (caracteristica.equals("maturidade")) {
                             conquista.setBonus(15); // Ex: bônus maior
                         }
