@@ -26,7 +26,7 @@ public class Estagiario {
         Scanner sc = new Scanner(System.in);
         int op = 0;
 
-        digitando("Bem-vindo(a) ao Labirinto da Autoestima!", 30);
+        digitando("Bem-vindo(a) ao Campus Internus: A jornada de um universitário!", 30);
 
         while (true) {
             System.out.println("\nMenu Principal:");
