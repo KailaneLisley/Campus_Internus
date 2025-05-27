@@ -8,7 +8,7 @@ import classes.negativas.PensamentoNegativo;
 import classes.negativas.Perigo;
 import classes.positivas.PequenaConquista;
 
-public class Estagiario {
+public class Campus_Internus {
 
     public static void digitando(String texto, int tempo_atraso) {
         for (char c : texto.toCharArray()) {
