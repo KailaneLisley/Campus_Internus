@@ -32,7 +32,7 @@ public class PensamentoNegativo {
     }
 
     public String efeito(Estudante estudante) {
-        estudante.perderConfianca(this.impactoConfianca);
+        estudante.diminuiConfianca(this.impactoConfianca);
         return "Você foi confrontado por um Pensamento Negativo: " + nome + "!";
     }
 

@@ -9,7 +9,7 @@ public class AutocriticaExcessiva  extends PensamentoNegativo {
 
     @Override
     public String efeito(Estudante estudante) {
-        super.efeito(estudante);
-        return "A Autocrítica Excessiva abalou sua confiança! Você perdeu " + getImpactoConfianca() + " pontos de confiança.";
+         estudante.diminuiConfianca(getImpactoConfianca());
+         return "A Autocrítica Excessiva abalou sua confiança! Você perdeu " + getImpactoConfianca() + " pontos de confiança.";
     }
 }

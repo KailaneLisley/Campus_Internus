@@ -48,6 +48,8 @@ public class Campus_Internus {
 
                     System.out.print("Digite o nome do(a) estudante: ");
                     String nomeEstudante = sc.nextLine();
+                    String vermelho = "\u001B[31m";
+                    String reset =  "\u001B[0m";
 
                     // Escolha de característica
                     System.out.println("\nEscolha uma característica que define seu personagem:");
@@ -85,14 +87,17 @@ public class Campus_Internus {
                     Estudante estudante = new Estudante(nomeEstudante, 0, confiancaInicial);
                     estudante.setCaracteristica(caracteristica); // Supondo que você tenha ou vá criar esse setter
 
-                    digitando("Olá, " + estudante.getNome() + ". Você se encontra em um labirinto que reflete seus desafios internos.", 20);
+                    digitando("Olá, "+ vermelho + estudante.getNome() + reset + ". Você se encontra em um labirinto que reflete seus desafios internos.", 20);
                     digitando("Sua confiança atual é: " + estudante.getPontosDeConfianca(), 20);
                     digitando("Colete 'Pequenas Conquistas' para aumentar sua confiança e enfrente 'Pensamentos Negativos'.", 20);
 
                     Labirinto labirinto = new Labirinto(8);
+
+                    digitando("Gerando labirinto... " , 20);
+
                     labirinto.gerarLabirinto();
 
-                    digitando("O labirinto foi gerado. A exploração começa agora!", 20);
+                    digitando("O labirinto foi gerado. A exploração começa agora! Quantidade de conquistas no labirinto: " + labirinto.getPequenasConquistasDisponiveis().size(), 20);
 
                     // Simula interações com conquistas e perigos (você pode adaptar conforme a mecânica)
                     PequenaConquista conquista = labirinto.encontrarPequenaConquistaNaPosicao(3);
@@ -105,9 +110,8 @@ public class Campus_Internus {
                         } else {
                             estudante.adicionarPequenaConquista(conquista);
                         }
-                      
-                        estudante.adicionarPequenaConquista(conquista);
                         labirinto.removerPequenaConquista(conquista);
+                        digitando("Restam " + labirinto.getPequenasConquistasDisponiveis().size() + " conquistas no labirinto.", 20);
                         digitando("Confiança atual: " + estudante.getPontosDeConfianca(), 20);
                     }
 
@@ -120,7 +124,7 @@ public class Campus_Internus {
                         digitando("Confiança atual: " + estudante.getPontosDeConfianca(), 20);
                     }
 
-                    digitando("\nLembre-se, " + estudante.getNome() + ", cada passo aqui é um passo em direção a reconhecer seu valor.", 50);
+                    digitando("\nLembre-se, " + vermelho + estudante.getNome() + reset + ", cada passo aqui é um passo em direção a reconhecer seu valor.", 50);
                     digitando("Foco, resiliência e autocompaixão serão seus guias.", 50);
 
                     //aqui começa o jogo msm
@@ -176,15 +180,18 @@ public class Campus_Internus {
                         // Verificar se tem pequena conquista na nova posição
                          conquista = labirinto.encontrarPequenaConquistaNaPosicao(posAtual);
                         if (conquista != null) {
-                            digitando("Você encontrou uma Pequena Conquista! " , 40);
+                            digitando("Você encontrou uma Pequena Conquista: " + conquista.getNome(), 40);
+
                             
                             estudante.adicionarPequenaConquista(conquista);
                             labirinto.removerPequenaConquista(conquista);
+                            digitando("Restam " + labirinto.getPequenasConquistasDisponiveis().size() + " conquistas no labirinto.", 20);
+
                             digitando("Sua confiança aumentou para: " + estudante.getPontosDeConfianca(), 30);
                         }
 
                         // Verificar se tem pensamento negativo
-                         pensamento = labirinto.encontrarPensamentoNegativoNaPosicao(posAtual);
+                         pensamento = labirinto.encontrarPensamentoNegativoNaPosicao(novaPos);
                         if (pensamento != null) {
                             digitando("Um pensamento negativo surgiu em sua mente...", 40);
                             digitando(pensamento.efeito(estudante), 40);
@@ -204,6 +211,17 @@ public class Campus_Internus {
                         if (estudante.getPontosDeConfianca() <= 0) {
                             digitando("Sua confiança chegou a zero. O labirinto interno ficou muito difícil... Mas nunca desista de você!", 50);
                             jogoAtivo = false;
+                            digitando("\nFim de jogo. Obrigado por jogar Campus Internus!", 50);
+
+                        }
+                        
+                        if (labirinto.todasConquistasColetadas() && labirinto.getSalaSaida() == null) {
+                            labirinto.gerarSalaSaida();
+                        }
+
+                        if (labirinto.getSalaSaida() != null && estudante.getLocalizacao() == labirinto.getSalaSaida()) {
+                            System.out.println("🎉 Você encontrou a saída e venceu o jogo! Parabéns! 🏆");
+                            System.exit(0);
                         }
                     }
 
