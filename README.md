@@ -1,5 +1,10 @@
   # 🌟 Campus Internus: A Jornada de um Universitário
 
+
+
+<img src="https://github.com/user-attachments/assets/ee17ed22-4677-4497-bcf6-cacf24f667f1" style="width:100%; max-height:400px; object-fit:cover;" />
+ 
+
 Bem-vindo(a) ao repositório do jogo narrativo "Campus Internos", desenvolvido em Java com base em Programação Orientada a Objetos. Você acompanhará um estudante universitário que, lutando contra a síndrome do impostor e a pressão dos estudos, precisa navegar por um labirinto mental para redescobrir sua autoconfiança e valor. 🧠💪
 
 ## 📜 Contexto Narrativo
