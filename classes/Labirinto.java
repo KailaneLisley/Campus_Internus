@@ -169,8 +169,99 @@ public class Labirinto {
    public void removerPerigo(Perigo var1) {
       this.perigos.remove(var1);
    }
+public void gerarLabirinto() {
+    Random random = new Random();
+    int totalSalas = this.tamanho * this.tamanho;
 
-   public void gerarLabirinto() {
+    this.estrutura.clear();
+    this.salasTrancadas.clear();
+
+    // Geração inicial da estrutura do labirinto
+    for (int i = 0; i < this.tamanho; i++) {
+        ArrayList<String> linha = new ArrayList<>();
+
+        for (int j = 0; j < this.tamanho; j++) {
+            int index = i * this.tamanho + j;
+            if (random.nextInt(100) < 70) {
+                linha.add("*");
+            } else {
+                linha.add("X");
+                this.salasTrancadas.add(index);
+            }
+        }
+
+        this.estrutura.add(linha);
+    }
+
+    // Garante que a sala 0 (início do jogador) esteja sempre liberada
+    this.estrutura.get(0).set(0, "*");
+    this.salasTrancadas.remove(0);
+
+    // Tentativas de posicionamento acessível de conquistas
+    boolean sucesso = false;
+    int tentativas = 0;
+    int maxTentativas = 1000;
+
+    while (tentativas < maxTentativas && !sucesso) {
+        tentativas++;
+        this.pequenasConquistasDisponiveis.clear();
+        this.pensamentosNegativos.clear();
+
+        Set<Integer> ocupadas = new HashSet<>();
+
+        // Lista temporária de conquistas
+        List<PequenaConquista> conquistas = new ArrayList<>();
+        conquistas.add(new ConquistaAcademica("Elogio do Professor", 3));
+        conquistas.add(new ConquistaPessoal("Pausa para Relaxar", 7));
+        conquistas.add(new SuperacaoDeDesafio("Entregar trabalho difícil", 10));
+        conquistas.add(new ChaveDaAutoestima("Aceitação das Imperfeições", 5, 12));
+
+        // Posiciona conquistas
+        for (PequenaConquista conquista : conquistas) {
+            int posicao;
+            do {
+                posicao = random.nextInt(totalSalas);
+            } while (this.salasTrancadas.contains(posicao) || ocupadas.contains(posicao));
+
+            conquista.setLocalizacao(posicao);
+            this.pequenasConquistasDisponiveis.add(conquista);
+            ocupadas.add(posicao);
+        }
+
+        // Lista de pensamentos negativos
+        List<PensamentoNegativo> pensamentos = new ArrayList<>();
+        pensamentos.add(new AutocriticaExcessiva(4));
+        pensamentos.add(new MedoDeExposicao(5));
+        pensamentos.add(new DuvidaParalisante(6));
+
+        // Posiciona pensamentos
+        for (PensamentoNegativo pn : pensamentos) {
+            int posicao;
+            do {
+                posicao = random.nextInt(totalSalas);
+            } while (this.salasTrancadas.contains(posicao) || ocupadas.contains(posicao));
+
+            pn.setLocalizacao(posicao);
+            this.pensamentosNegativos.add(pn);
+            ocupadas.add(posicao);
+        }
+
+        // Verifica se todas as conquistas são acessíveis a partir da sala 0
+        sucesso = true;
+        for (PequenaConquista conquista : this.pequenasConquistasDisponiveis) {
+            if (!this.ehAcessivel(0, conquista.getLocalizacao())) {
+                sucesso = false;
+                break;
+            }
+        }
+    }
+
+    if (!sucesso) {
+        throw new RuntimeException("Não foi possível gerar um labirinto acessível após várias tentativas.");
+    }
+}
+
+   public void gerarLabirinto2() {
       Random var1 = new Random();
       int var2 = this.tamanho * this.tamanho;
       this.estrutura.clear();
