@@ -318,7 +318,7 @@ public void gerarLabirinto() {
       } while(var3 == 0);
 
       this.salaSaida = var3;
-      System.out.println("âš  A sala de saÃ\u00adda foi revelada! VÃ¡ atÃ© a sala " + this.salaSaida + " para vencer!");
+      System.out.println("A sala de saída foi revelada! Va até a sala " + this.salaSaida + " para vencer!");
    }
 
    public Integer getSalaSaida() {

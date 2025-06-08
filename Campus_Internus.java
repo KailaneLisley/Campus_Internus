@@ -220,7 +220,7 @@ public class Campus_Internus {
                         }
 
                         if (labirinto.getSalaSaida() != null && estudante.getLocalizacao() == labirinto.getSalaSaida()) {
-                            System.out.println("🎉 Você encontrou a saída e venceu o jogo! Parabéns! 🏆");
+                            System.out.println(" Você encontrou a saída e venceu o jogo! Parabéns! ");
                             System.exit(0);
                         }
                     }
