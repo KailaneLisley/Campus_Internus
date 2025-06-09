@@ -1,11 +1,9 @@
-  # 🌟 Campus Internus: A Jornada de um Universitário
-
-
+  # 🌟 Labirinto dos Mistérios: A Jornada de um Universitário
 
 <img src="https://github.com/user-attachments/assets/ee17ed22-4677-4497-bcf6-cacf24f667f1" style="width:100%; max-height:400px; object-fit:cover;" />
  
 
-Bem-vindo(a) ao repositório do jogo narrativo "Campus Internos", desenvolvido em Java com base em Programação Orientada a Objetos. Você acompanhará um estudante universitário que, lutando contra a síndrome do impostor e a pressão dos estudos, precisa navegar por um labirinto mental para redescobrir sua autoconfiança e valor. 🧠💪
+Bem-vindo(a) ao repositório do jogo narrativo "Labirinto dos Mistérios", desenvolvido em Java com base em Programação Orientada a Objetos. Você acompanhará um estudante universitário que, lutando contra a síndrome do impostor e a pressão dos estudos, precisa navegar por um labirinto mental para redescobrir sua autoconfiança e valor. 🧠💪
 
 ## 📜 Contexto Narrativo
 
@@ -13,32 +11,35 @@ Um estudante universitário, sobrecarregado pela vida académica e duvidando con
 
 ## 🎮 Sobre o Jogo
 
-Explore um universo interno onde cada sala e corredor reflete os desafios e inseguranças do estudante. Você encontrará:
-
-- **Pequenas Conquistas:** Itens colecionáveis que representam momentos de validação e autoconfiança (ex: "Elogio Recebido", "Problema Resolvido", "Nota Positiva"). Estes são representados pela classe `PequenaConquista` e suas subclasses.
-- **Pensamentos Negativos:** Obstáculos que manifestam a síndrome do impostor e abalam a confiança do estudante (ex: "Autocrítica Excessiva", "Medo de Exposição", "Dúvida Paralisante"). Estes são representados pela classe `PensamentoNegativo` e suas variações.
-- **Portas Simbólicas:** Barreiras que precisam de "Chaves da Autoestima" (um tipo especial de `PequenaConquista` que representa uma realização significativa) para serem desbloqueadas.
-- **Momentos de Clareza:** Habilidades simples que ajudam a superar obstáculos ou a ganhar uma nova perspetiva (ex: "Foco Renovado", "Lembrete Positivo").
-- **Desafios Simples:** Enigmas ou interações que simbolizam a superação de bloqueios mentais e recompensam o jogador.
+- Explore ambientes que representam os desafios emocionais do estudante.
+- Colete pequenas conquistas para aumentar sua confiança e autovalorização.
+- Enfrente pensamentos negativos que diminuem sua autoestima.
+- Desbloqueie portas simbólicas usando “Chaves da Autoestima”, representando superações importantes.
+- Supere desafios simples que simbolizam bloqueios mentais.
+- Acompanhe reflexões e narrativas que revelam a evolução emocional do personagem.
+- Explore um universo interno onde cada sala e corredor reflete os desafios e inseguranças do estudante. Você encontrará:
 
 Narrativas introspectivas e reflexões do próprio estudante revelam a sua história e progresso emocional à medida que você avança no jogo.
 
 ## 🧱 Funcionalidades
 
-- Arquitetura baseada em POO (Classes principais: `Estudante`, `PequenaConquista`, `PensamentoNegativo`, `Labirinto`).
-- Geração de labirinto (pode ser pré-definida para simplificar ou procedural básica).
-- Progressão da intensidade dos "Pensamentos Negativos".
-- Sistema de portas simbólicas e "Chaves da Autoestima".
-- Desafios simples com recompensas que fortalecem a confiança.
-- Modo história conduzido por reflexões e pensamentos do estudante.
-- Tratamento de exceções para uma experiência de jogo mais fluida.
+- Arquitetura baseada em POO (Classes principais: `Estudante`, `PequenaConquista`, `PensamentoNegativo`, `Labirinto`);
+- Geração de labirinto;
+- Progressão da intensidade dos "Pensamentos Negativos";
+- Sistema de portas simbólicas e "Chaves da Autoestima";
+- Desafios simples com recompensas que fortalecem a confiança;
+- Modo história conduzido por reflexões e pensamentos do estudante;
+- Tratamento de exceções para uma experiência de jogo mais fluida;
 
-## 🌟 Diferenciais
+## 🌟 Conceitos de POO Aplicados
 
-- Forte narrativa focada na jornada de autoconhecimento e superação da síndrome do impostor.
-- Sistema de "Momentos de Clareza" como mecânica de apoio.
-- Easter Egg: "Sala da Gratidão", um espaço secreto com mensagens de apoio ou um diário de conquistas passadas, reforçando a autoestima. 💌
-- Mensagens de encorajamento ao superar desafios ou encontrar "Pequenas Conquistas" significativas.
+- *Encapsulamento:* Os atributos são privados e acessados por métodos públicos (get e set), protegendo os dados internos.
+- *Herança:* Classes como AutocriticaExcessiva, MedoDeExposicao e DuvidaParalisante herdam de PensamentoNegativo, e ConquistaAcademica herda de PequenaConquista.
+- *Polimorfismo:* O método efeito() é sobrescrito nas subclasses para que cada pensamento negativo ou conquista tenha um impacto diferente.
+- *Abstração:* As classes representam conceitos genéricos do mundo interno do estudante, ocultando detalhes de implementação.
+- *Coleções:* Listas armazenam pensamentos negativos, conquistas e salas do labirinto, permitindo manipular esses dados dinamicamente durante o jogo.
+- *Tratamento de Exceções:* Situações como comandos inválidos ou erros de movimentação são tratadas com mensagens claras, evitando falhas no jogo.
+- *Easter Egg:* O jogo traz surpresas simbólicas como a “parede invisível do medo” (mensagem ao tentar acessar locais proibidos) e efeitos ocultos baseados na personalidade do estudante (ex: impacto maior se ele tiver ansiedade).
 
 ## 👩‍💻 Equipe de Desenvolvimento
 
@@ -47,4 +48,3 @@ Narrativas introspectivas e reflexões do próprio estudante revelam a sua hist�
 - Quézia Beatriz da Silva Costa 
 
 Esperamos que a jornada deste estudante inspire reflexão, empatia e o reconhecimento da importância da autocompaixão e da autoestima – assim como nos inspirou durante a sua re-criação.
-
