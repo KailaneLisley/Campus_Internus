@@ -33,7 +33,7 @@ Narrativas introspectivas e reflexões do próprio estudante revelam a sua hist�
 
 ## 🌟 Conceitos de POO Aplicados
 
-- *Encapsulamento:* Os atributos são privados e acessados por métodos públicos (get e set), protegendo os dados internos.
+- #*Encapsulamento:*# Os atributos são privados e acessados por métodos públicos (get e set), protegendo os dados internos.
 - *Herança:* Classes como AutocriticaExcessiva, MedoDeExposicao e DuvidaParalisante herdam de PensamentoNegativo, e ConquistaAcademica herda de PequenaConquista.
 - *Polimorfismo:* O método efeito() é sobrescrito nas subclasses para que cada pensamento negativo ou conquista tenha um impacto diferente.
 - *Abstração:* As classes representam conceitos genéricos do mundo interno do estudante, ocultando detalhes de implementação.
