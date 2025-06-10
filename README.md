@@ -42,7 +42,7 @@ Narrativas introspectivas e reflexões do próprio estudante revelam a sua hist�
 
 ## 💥 EasterEgg
 - *Chave da Autoestima*: Símbolo especial que desbloqueia novas áreas no mapa, representando momentos de autodescoberta ou avanço emocional.
-- *Impactoa Ocultos*: Efeitos ocultos baseados na personalidade do estudante (ex: impacto maior se ele tiver ansiedade).
+- *Impactos Ocultos*: Efeitos ocultos baseados na personalidade do estudante (ex: impacto maior se ele tiver ansiedade).
 
 ## ⭐ Extras
 
