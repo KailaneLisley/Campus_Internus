@@ -34,20 +34,21 @@ Narrativas introspectivas e reflexões do próprio estudante revelam a sua hist�
 ## 🌟 Conceitos de POO Aplicados
 
 - *Encapsulamento:* Os atributos são privados e acessados por métodos públicos (get e set), protegendo os dados internos.
-- *Herança:* Classes como AutocriticaExcessiva, MedoDeExposicao e DuvidaParalisante herdam de PensamentoNegativo, e ConquistaAcademica herda de PequenaConquista.
+- *Herança:* Aulas como AutocriticaExcessiva, MedoDeExposicao e DuvidaParalisante herdam de PensamentoNegativo, e ConquistaAcademica herda de PequenaConquista.
 - *Polimorfismo:* O método efeito() é sobrescrito nas subclasses para que cada pensamento negativo ou conquista tenha um impacto diferente.
 - *Abstração:* As classes representam conceitos genéricos do mundo interno do estudante, ocultando detalhes de implementação.
 - *Coleções:* Listas armazenam pensamentos negativos, conquistas e salas do labirinto, permitindo manipular esses dados dinamicamente durante o jogo.
-- *Tratamento de Exceções:* Situações como comandos inválidos ou erros de movimentação são tratadas com mensagens claras, evitando falhas no jogo.
+- *Tratamento de Exceções:* Situações como comandos inválidos ou erros de entrega são tratadas com mensagens claras, evitando falhas no jogo.
 
-## 💥 EasterEgg
+## 💥 Ovo de Páscoa
 - *Chave da Autoestima*: Símbolo especial que desbloqueia novas áreas no mapa, representando momentos de autodescoberta ou avanço emocional.
-- *Impactos Ocultos*: Efeitos ocultos baseados na personalidade do estudante (ex: impacto maior se ele tiver ansiedade).
+- *Impactos Ocultos*: Efeito oculto em forma de mensagem especial exibida ao usuário quando o jogador tentar acessar locais proibido. A mensagem é baseados na personalidade do estudante (ex: impacto maior se ele tiver ansiedade).
+- *Bônus Secreto da Maturidade*: Com a característica "maturidade", o jogador ganha +5 pontos de confiança ao pegar uma conquista.
 
 ## ⭐ Extras
 
-- *Sistema de Confiança*: O estudante ganha ou perde pontos de confiança conforme interage com conquistas e pensamentos negativos. Isso cria uma dinâmica emocional no jogo, conectando o progresso à autoestima do personagem.
-- *Paredes do Medo*: Mensagem especial exibida ao usuário quando o jogador tentar acessar locais proibidos
+- *Sistema de Confiança*: O ganha estudante ou perde pontos de confiança conforme interação com conquistas e pensamentos negativos. Isso cria uma dinâmica emocional no jogo, conectando o progresso à autoestima do personagem.
+- *Característica do Estudante*: Permite personalização de personalidade do jogador, podendo ter ansiedade, confiança, sabedoria e etc, afetando o impacto de eventos (como pensamentos negativos terem mais força em estudantes ansiosos).
 
 
 ## 💻 Funcionamento no Terminal
@@ -57,6 +58,8 @@ Narrativas introspectivas e reflexões do próprio estudante revelam a sua hist�
 
 - Juliana Cristina de Oliveira Tenório 
 - Kailane Lisley de Araújo Silva  
-- Quézia Beatriz da Silva Costa 
+-Quezia Beatriz da Silva Costa 
 
-Esperamos que a jornada deste estudante inspire reflexão, empatia e o reconhecimento da importância da autocompaixão e da autoestima – assim como nos inspirou durante a sua re-criação.
+Esperamos que a jornada deste estudante inspire reflexão, empatia e o reconhecimento da importância da autocompaixão e da autoestima – assim como nos produzimos durante a sua recriação.
+
+ 
