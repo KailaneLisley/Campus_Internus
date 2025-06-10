@@ -1,4 +1,4 @@
-  # 🌟 Labirinto dos Mistérios: A Jornada de um Universitário
+# 🌟 Labirinto dos Mistérios: A Jornada de um Universitário
 
 <img src="https://github.com/user-attachments/assets/ee17ed22-4677-4497-bcf6-cacf24f667f1" style="width:100%; max-height:400px; object-fit:cover;" />
  
@@ -57,8 +57,8 @@ Narrativas introspectivas e reflexões do próprio estudante revelam a sua hist�
 ## 👩‍💻 Equipe de Desenvolvimento
 
 - Juliana Cristina de Oliveira Tenório 
-- Kailane Lisley de Araújo Silva  
--Quezia Beatriz da Silva Costa 
+- Kailane Lisley de Araújo Silva
+- Quezia Beatriz da Silva Costa 
 
 Esperamos que a jornada deste estudante inspire reflexão, empatia e o reconhecimento da importância da autocompaixão e da autoestima – assim como nos produzimos durante a sua recriação.
 
