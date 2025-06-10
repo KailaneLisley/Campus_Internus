@@ -39,12 +39,16 @@ Narrativas introspectivas e reflexões do próprio estudante revelam a sua hist�
 - *Abstração:* As classes representam conceitos genéricos do mundo interno do estudante, ocultando detalhes de implementação.
 - *Coleções:* Listas armazenam pensamentos negativos, conquistas e salas do labirinto, permitindo manipular esses dados dinamicamente durante o jogo.
 - *Tratamento de Exceções:* Situações como comandos inválidos ou erros de movimentação são tratadas com mensagens claras, evitando falhas no jogo.
-- *Easter Egg:* O jogo traz surpresas simbólicas como a “parede invisível do medo” (mensagem ao tentar acessar locais proibidos) e efeitos ocultos baseados na personalidade do estudante (ex: impacto maior se ele tiver ansiedade).
+
+## 💥 EasterEgg
+- *Chave da Autoestima*: Símbolo especial que desbloqueia novas áreas no mapa, representando momentos de autodescoberta ou avanço emocional.
+- *Impactoa Ocultos*: Efeitos ocultos baseados na personalidade do estudante (ex: impacto maior se ele tiver ansiedade).
 
 ## ⭐ Extras
 
 - *Sistema de Confiança*: O estudante ganha ou perde pontos de confiança conforme interage com conquistas e pensamentos negativos. Isso cria uma dinâmica emocional no jogo, conectando o progresso à autoestima do personagem.
-- *Chave da Autoestima*: Símbolo especial que desbloqueia novas áreas no mapa, representando momentos de autodescoberta ou avanço emocional.
+- *Paredes do Medo*: Mensagem especial exibida ao usuário quando o jogador tentar acessar locais proibidos
+
 
 ## 💻 Funcionamento no Terminal
 ![Captura de tela 2025-06-10 091200](https://github.com/user-attachments/assets/fb95b131-97c7-40d8-ab5e-66731c6feaa7)
