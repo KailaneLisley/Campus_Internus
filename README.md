@@ -43,12 +43,12 @@ Narrativas introspectivas e reflexões do próprio estudante revelam a sua hist�
 ## 💥 Ovo de Páscoa
 - *Chave da Autoestima*: Símbolo especial que desbloqueia novas áreas no mapa, representando momentos de autodescoberta ou avanço emocional.
 - *Impactos Ocultos*: Efeito oculto em forma de mensagem especial exibida ao usuário quando o jogador tentar acessar locais proibido. A mensagem é baseados na personalidade do estudante (ex: impacto maior se ele tiver ansiedade).
-- *Bônus Secreto da Maturidade*: Com a característica "maturidade", o jogador ganha +5 pontos de confiança ao pegar uma conquista.
 
 ## ⭐ Extras
 
 - *Sistema de Confiança*: O ganha estudante ou perde pontos de confiança conforme interação com conquistas e pensamentos negativos. Isso cria uma dinâmica emocional no jogo, conectando o progresso à autoestima do personagem.
 - *Característica do Estudante*: Permite personalização de personalidade do jogador, podendo ter maturidade, ansiedade ou sabedoria, afetando o impacto de eventos (como pensamentos negativos terem mais força em estudantes ansiosos).
+- *Bônus Secreto da Maturidade*: Com a característica "maturidade", o jogador ganha +5 pontos de confiança ao pegar uma conquista.
 
 
 ## 💻 Funcionamento no Terminal
