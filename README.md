@@ -41,6 +41,11 @@ Narrativas introspectivas e reflexões do próprio estudante revelam a sua hist�
 - *Tratamento de Exceções:* Situações como comandos inválidos ou erros de movimentação são tratadas com mensagens claras, evitando falhas no jogo.
 - *Easter Egg:* O jogo traz surpresas simbólicas como a “parede invisível do medo” (mensagem ao tentar acessar locais proibidos) e efeitos ocultos baseados na personalidade do estudante (ex: impacto maior se ele tiver ansiedade).
 
+## ⭐ Extras
+
+- *Sistema de Confiança*: O estudante ganha ou perde pontos de confiança conforme interage com conquistas e pensamentos negativos. Isso cria uma dinâmica emocional no jogo, conectando o progresso à autoestima do personagem.
+- *Chave da Autoestima*: Símbolo especial que desbloqueia novas áreas no mapa, representando momentos de autodescoberta ou avanço emocional.
+
 ## 👩‍💻 Equipe de Desenvolvimento
 
 - Juliana Cristina de Oliveira Tenório 
