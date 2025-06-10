@@ -46,6 +46,9 @@ Narrativas introspectivas e reflexões do próprio estudante revelam a sua hist�
 - *Sistema de Confiança*: O estudante ganha ou perde pontos de confiança conforme interage com conquistas e pensamentos negativos. Isso cria uma dinâmica emocional no jogo, conectando o progresso à autoestima do personagem.
 - *Chave da Autoestima*: Símbolo especial que desbloqueia novas áreas no mapa, representando momentos de autodescoberta ou avanço emocional.
 
+## 💻 Funcionamento no Terminal
+![Captura de tela 2025-06-10 091200](https://github.com/user-attachments/assets/fb95b131-97c7-40d8-ab5e-66731c6feaa7)
+
 ## 👩‍💻 Equipe de Desenvolvimento
 
 - Juliana Cristina de Oliveira Tenório 
