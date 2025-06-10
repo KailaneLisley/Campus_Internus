@@ -48,7 +48,7 @@ Narrativas introspectivas e reflexões do próprio estudante revelam a sua hist�
 ## ⭐ Extras
 
 - *Sistema de Confiança*: O ganha estudante ou perde pontos de confiança conforme interação com conquistas e pensamentos negativos. Isso cria uma dinâmica emocional no jogo, conectando o progresso à autoestima do personagem.
-- *Característica do Estudante*: Permite personalização de personalidade do jogador, podendo ter ansiedade, confiança, sabedoria e etc, afetando o impacto de eventos (como pensamentos negativos terem mais força em estudantes ansiosos).
+- *Característica do Estudante*: Permite personalização de personalidade do jogador, podendo ter maturidade, ansiedade ou sabedoria, afetando o impacto de eventos (como pensamentos negativos terem mais força em estudantes ansiosos).
 
 
 ## 💻 Funcionamento no Terminal
